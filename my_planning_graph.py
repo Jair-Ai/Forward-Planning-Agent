@@ -195,7 +195,7 @@ class PlanningGraph:
         for goal in self.goal:
             for cost, layer in enumerate(self.literal_layers):
                 if goal in layer:
-                    max_level_cost = max(cost, level_cost)
+                    max_level_cost = max(cost, max_level_cost)
                     break    
         return max_level_cost
 
